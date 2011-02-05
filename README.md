@@ -1,9 +1,14 @@
-Hop, the opener
-===============
+Hop
+===
 
-Hop means jump in Danish and that's what Hop will do for you. It'll jump
-to wherever you want to go. In short it's a command line tool to utilise
-the OS X open command combined with a database of aliases.
+Description
+-----------
+
+Hop is a command line bookmark opener.
+
+Hop means jump in Danish and that's what Hop will do for you. It'll jump to
+wherever you want to go. It's a tool to utilize the OS X open command combined
+with a database of aliases.
 
 Examples
 --------
