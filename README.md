@@ -52,6 +52,12 @@ And Hop will... well, you get the point.
 
 And that's all there is to it. Enjoy!
 
+Installation
+------------
+
+    gem install hop
+
+Or something to that effect. Requires Ruby and Rubygems.
 
 Inspiration
 -----------
