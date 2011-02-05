@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Jacob Atzen"]
   s.email       = ["jacob@jacobatzen.dk"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/jacobat/hop"
   s.summary     = %q{Shortcut aliases to open from the commandline}
   s.description = %q{Shortcut aliases to open from the commandline, yay!}
 
