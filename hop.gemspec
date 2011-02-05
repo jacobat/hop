@@ -6,11 +6,11 @@ Gem::Specification.new do |s|
   s.name        = "hop"
   s.version     = Hop::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["TODO: Write your name"]
-  s.email       = ["TODO: Write your email address"]
+  s.authors     = ["Jacob Atzen"]
+  s.email       = ["jacob@jacobatzen.dk"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{Shortcut aliases to open from the commandline}
+  s.description = %q{Shortcut aliases to open from the commandline, yay!}
 
   s.rubyforge_project = "hop"
 
