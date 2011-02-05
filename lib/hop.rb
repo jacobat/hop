@@ -39,8 +39,10 @@ class Hop
           printf("%-16s %s\n", key, bookmark)
         end
       else
+        parts = ARGV[0].split(//).map{|part| Regexp.escape(part) }
+        regex = Regexp.new(/.*#{parts.join('.*')}.*/)
         urls = bookmarks.keys.select do |u|
-          u.to_s.match(/.*#{ARGV[0].split(//).join('.*')}.*/)
+          u.to_s.match(regex)
         end
 
         if(ARGV[1] &&
