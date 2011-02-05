@@ -59,6 +59,15 @@ Installation
 
 Or something to that effect. Requires Ruby and Rubygems.
 
+Configuration
+-------------
+
+By default hop will store bookmarks in a .hop directory within your home
+directory. This can be changed if you want by adding a config.yml file
+in ~/.hop with the following contents:
+
+    bookmarks: /path/to/bookmarks.yml
+
 Inspiration
 -----------
 

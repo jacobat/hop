@@ -3,6 +3,14 @@ require 'trollop'
 
 class Hop
   class << self
+    def default_config
+      { 'bookmarks' => File.join(ENV['HOME'], '.hop', 'bookmarks.yml') }
+    end
+
+    def config
+      @config ||= YAML::load_file(File.join(ENV['HOME'], '.hop', 'config.yml')) || default_config
+    end
+
     def run
       ARGV[0] = '-h' unless ARGV[0]
       opts = Trollop::options do
@@ -12,7 +20,7 @@ class Hop
         opt :list
       end
 
-      $bookmarks_file = File.join(ENV['HOME'], '.hop', 'bookmarks.yml')
+      $bookmarks_file = File.expand_path(config['bookmarks'])
 
       bookmarks = {}
 
