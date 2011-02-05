@@ -7,6 +7,7 @@ class Hop
       ARGV[0] = '-h' unless ARGV[0]
       opts = Trollop::options do
         opt :add, "Add URL like: apple:http://www.apple.com", :type => String
+        opt :delete, "Pass in a key to delete the alias", :type => String
         opt :force, "Force overwriting of existing keys"
         opt :list
       end
@@ -32,6 +33,11 @@ class Hop
           File.open($bookmarks_file, 'w') do |file|
             YAML::dump(bookmarks.merge(key => url.join(':')), file)
           end
+        end
+      elsif opts[:delete_given]
+        bookmarks.delete(opts[:delete])
+        File.open($bookmarks_file, 'w') do |file|
+          YAML::dump(bookmarks, file)
         end
       elsif opts[:list_given]
         printf("%-16s %s\n", "key", "bookmark")
