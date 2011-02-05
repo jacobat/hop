@@ -4,6 +4,7 @@ require 'trollop'
 class Hop
   class << self
     def run
+      ARGV[0] = '-h' unless ARGV[0]
       opts = Trollop::options do
         opt :add, "Add URL like: apple:http://www.apple.com", :type => String
         opt :force, "Force overwriting of existing keys"
