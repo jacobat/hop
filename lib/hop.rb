@@ -20,7 +20,7 @@ class Hop
       end
 
       if(File.exist?($bookmarks_file))
-        bookmarks = YAML::load_file($bookmarks_file)
+        bookmarks = YAML::load_file($bookmarks_file) || {}
       end
 
       if opts[:add_given]
